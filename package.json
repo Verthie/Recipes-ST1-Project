@@ -2,10 +2,14 @@
   "name": "recipies",
   "version": "1.0.0",
   "description": "recipes",
-  "main": "index.js",
+  "main": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": false
+  },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
