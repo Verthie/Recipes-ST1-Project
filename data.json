@@ -1,0 +1,243 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Spaghetti Bolognese",
+      "image_url": "https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Curry",
+      "image_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Beef Stew",
+      "image_url": "https://images.unsplash.com/photo-1604908177453-7462950a6a3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Mushroom Risotto",
+      "image_url": "https://images.unsplash.com/photo-1595908129746-57ca1a63dd4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Fish and Chips",
+      "image_url": "https://images.unsplash.com/photo-1580217593608-61931cefc821?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
+    }
+  ],
+  "recipe_details": [
+    {
+      "id": 1,
+      "ingredients": [
+        {
+          "name": "minced beef",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves"
+        },
+        {
+          "name": "canned tomatoes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "spaghetti",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "title": "Spaghetti Bolognese",
+      "cooking_time": 45,
+      "serving_size": 4
+    },
+    {
+      "id": 2,
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves"
+        },
+        {
+          "name": "canned tomatoes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "rice",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "title": "Chicken Curry",
+      "cooking_time": 45,
+      "serving_size": 4
+    },
+    {
+      "id": 3,
+      "ingredients": [
+        {
+          "name": "beef",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves"
+        },
+        {
+          "name": "canned tomatoes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "potato",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ingredients": [
+        {
+          "name": "mushroom",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves"
+        },
+        {
+          "name": "canned tomatoes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "rice",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "title": "Mushroom Risotto",
+      "cooking_time": 45,
+      "serving_size": 4
+    },
+    {
+      "id": 5,
+      "ingredients": [
+        {
+          "name": "fish",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves"
+        },
+        {
+          "name": "canned tomatoes",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "potato",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "title": "Fish and Chips",
+      "cooking_time": 45,
+      "serving_size": 4
+    }
+  ]
+}
