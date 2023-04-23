@@ -1,52 +1,52 @@
 {
   "recipes": [
     {
-      "id": 1,
+      "id": 0,
       "name": "Spaghetti Bolognese",
       "image_url": "https://images.unsplash.com/photo-1622973536968-3ead9e780960?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
-      "id": 2,
-      "name": "Chicken Curry",
+      "id": 1,
+      "name": "Kurczak Curry",
       "image_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80"
     },
     {
-      "id": 3,
-      "name": "Beef Stew",
+      "id": 2,
+      "name": "Gulasz Wołowy",
       "image_url": "https://images.unsplash.com/photo-1604908177453-7462950a6a3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80"
     },
     {
-      "id": 4,
-      "name": "Mushroom Risotto",
+      "id": 3,
+      "name": "Risotto Grzybowe",
       "image_url": "https://images.unsplash.com/photo-1595908129746-57ca1a63dd4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
-      "id": 5,
-      "name": "Fish and Chips",
+      "id": 4,
+      "name": "Ryba z Frytkami",
       "image_url": "https://images.unsplash.com/photo-1580217593608-61931cefc821?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
     }
   ],
   "recipe_details": [
     {
-      "id": 1,
+      "id": 0,
       "ingredients": [
         {
-          "name": "minced beef",
+          "name": "mielona wołowina",
           "quantity": 500,
           "unit": "g"
         },
         {
-          "name": "onion",
+          "name": "cebula",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "sztuk"
         },
         {
-          "name": "garlic",
+          "name": "czosnek",
           "quantity": 2,
-          "unit": "cloves"
+          "unit": "ząbków"
         },
         {
-          "name": "canned tomatoes",
+          "name": "pomidory z puszki",
           "quantity": 400,
           "unit": "g"
         },
@@ -56,188 +56,196 @@
           "unit": "g"
         },
         {
-          "name": "vegetable oil",
+          "name": "olej roślinny",
           "quantity": 1,
-          "unit": "tbsp"
+          "unit": "łyżek"
         },
         {
-          "name": "salt",
+          "name": "sól",
           "quantity": 1,
-          "unit": "tsp"
+          "unit": "łyżeczek"
         }
       ],
       "title": "Spaghetti Bolognese",
       "cooking_time": 45,
-      "serving_size": 4
+      "serving_size": 4,
+      "image_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80"
+    },
+    {
+      "id": 1,
+      "ingredients": [
+        {
+          "name": "pierś kurczaka",
+          "quantity": 500,
+          "unit": "g"
+        },
+        {
+          "name": "cebula",
+          "quantity": 1,
+          "unit": "sztuk"
+        },
+        {
+          "name": "czosnek",
+          "quantity": 2,
+          "unit": "ząbków"
+        },
+        {
+          "name": "pomidory z puszki",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "ryż",
+          "quantity": 400,
+          "unit": "g"
+        },
+        {
+          "name": "olej roślinny",
+          "quantity": 1,
+          "unit": "łyżek"
+        },
+        {
+          "name": "sól",
+          "quantity": 1,
+          "unit": "łyżeczek"
+        }
+      ],
+      "title": "Kurczak Curry",
+      "cooking_time": 45,
+      "serving_size": 4,
+      "image_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80"
     },
     {
       "id": 2,
       "ingredients": [
         {
-          "name": "chicken breast",
+          "name": "wołowina",
           "quantity": 500,
           "unit": "g"
         },
         {
-          "name": "onion",
+          "name": "cebula",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "sztuk"
         },
         {
-          "name": "garlic",
+          "name": "czosnek",
           "quantity": 2,
-          "unit": "cloves"
+          "unit": "ząbków"
         },
         {
-          "name": "canned tomatoes",
+          "name": "pomidory z puszki",
           "quantity": 400,
           "unit": "g"
         },
         {
-          "name": "rice",
+          "name": "ziemniaki",
           "quantity": 400,
           "unit": "g"
         },
         {
-          "name": "vegetable oil",
+          "name": "olej roślinny",
           "quantity": 1,
-          "unit": "tbsp"
+          "unit": "łyżek"
         },
         {
-          "name": "salt",
+          "name": "sól",
           "quantity": 1,
-          "unit": "tsp"
+          "unit": "łyżeczek"
         }
       ],
-      "title": "Chicken Curry",
+      "title": "Gulasz Wołowy",
       "cooking_time": 45,
-      "serving_size": 4
+      "serving_size": 4,
+      "image_url": "https://images.unsplash.com/photo-1604908177453-7462950a6a3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80"
     },
     {
       "id": 3,
       "ingredients": [
         {
-          "name": "beef",
+          "name": "grzyby",
           "quantity": 500,
           "unit": "g"
         },
         {
-          "name": "onion",
+          "name": "cebula",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "sztuk"
         },
         {
-          "name": "garlic",
+          "name": "czosnek",
           "quantity": 2,
-          "unit": "cloves"
+          "unit": "ząbków"
         },
         {
-          "name": "canned tomatoes",
+          "name": "pomidory z puszki",
           "quantity": 400,
           "unit": "g"
         },
         {
-          "name": "potato",
+          "name": "ryż",
           "quantity": 400,
           "unit": "g"
         },
         {
-          "name": "vegetable oil",
+          "name": "olej roślinny",
           "quantity": 1,
-          "unit": "tbsp"
+          "unit": "łyżek"
         },
         {
-          "name": "salt",
+          "name": "sól",
           "quantity": 1,
-          "unit": "tsp"
+          "unit": "łyżeczek"
         }
-      ]
+      ],
+      "title": "Risotto Grzybowe",
+      "cooking_time": 45,
+      "serving_size": 4,
+      "image_url": "https://images.unsplash.com/photo-1595908129746-57ca1a63dd4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
       "id": 4,
       "ingredients": [
         {
-          "name": "mushroom",
+          "name": "ryba",
           "quantity": 500,
           "unit": "g"
         },
         {
-          "name": "onion",
+          "name": "cebula",
           "quantity": 1,
           "unit": "unit"
         },
         {
-          "name": "garlic",
+          "name": "czosnek",
           "quantity": 2,
-          "unit": "cloves"
+          "unit": "ząbków"
         },
         {
-          "name": "canned tomatoes",
+          "name": "pomidory z puszki",
           "quantity": 400,
           "unit": "g"
         },
         {
-          "name": "rice",
+          "name": "ziemniaki",
           "quantity": 400,
           "unit": "g"
         },
         {
-          "name": "vegetable oil",
+          "name": "olej roślinny",
           "quantity": 1,
-          "unit": "tbsp"
+          "unit": "łyżek"
         },
         {
-          "name": "salt",
+          "name": "sól",
           "quantity": 1,
-          "unit": "tsp"
+          "unit": "łyżeczek"
         }
       ],
-      "title": "Mushroom Risotto",
+      "title": "Ryba z frytkami",
       "cooking_time": 45,
-      "serving_size": 4
-    },
-    {
-      "id": 5,
-      "ingredients": [
-        {
-          "name": "fish",
-          "quantity": 500,
-          "unit": "g"
-        },
-        {
-          "name": "onion",
-          "quantity": 1,
-          "unit": "unit"
-        },
-        {
-          "name": "garlic",
-          "quantity": 2,
-          "unit": "cloves"
-        },
-        {
-          "name": "canned tomatoes",
-          "quantity": 400,
-          "unit": "g"
-        },
-        {
-          "name": "potato",
-          "quantity": 400,
-          "unit": "g"
-        },
-        {
-          "name": "vegetable oil",
-          "quantity": 1,
-          "unit": "tbsp"
-        },
-        {
-          "name": "salt",
-          "quantity": 1,
-          "unit": "tsp"
-        }
-      ],
-      "title": "Fish and Chips",
-      "cooking_time": 45,
-      "serving_size": 4
+      "serving_size": 4,
+      "image_url": "https://images.unsplash.com/photo-1580217593608-61931cefc821?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
     }
   ]
 }

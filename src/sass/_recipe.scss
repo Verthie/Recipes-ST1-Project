@@ -37,7 +37,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 20%) skewY(-6deg);
+    transform: translate(-50%, 20%);
     color: #fff;
     font-weight: 700;
     font-size: 3.25rem;
@@ -80,6 +80,13 @@
     }
   }
 
+  &__info-icon {
+    height: 2.35rem;
+    width: 2.35rem;
+    fill: aqua;
+    margin-right: 1.15rem;
+  }
+
   &__info-data {
     margin-right: 0.5rem;
     font-weight: 700;
@@ -92,7 +99,7 @@
   }
 
   &__user-generated {
-    background-color: darken(aqua, 2%);
+    background-color: darken(rgba(68, 84, 228, 0), 2%);
 
     display: flex;
     align-items: center;
@@ -107,7 +114,7 @@
     svg {
       height: 2.25rem;
       width: 2.25rem;
-      fill: aqua;
+      fill: rgba(137, 203, 251, 0);
     }
   }
 
