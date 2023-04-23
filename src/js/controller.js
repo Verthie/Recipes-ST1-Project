@@ -2,21 +2,35 @@ import data from "../../data.json";
 import icons from "url:../img/icons.svg";
 
 const recipeContainer = document.querySelector(".recipe");
+const previewContainer = document.querySelector(".results");
+const searchInput = document.querySelector(".search__field");
 
-async function getRecipies() {
-  let { recipes } = data;
-  let { name, image_url, servings, ingredients } = recipes[0];
+let { recipes } = data;
+
+const renderSpinner = function (parentElement) {
+  const markup = `
+    <div class="spinner">
+          <svg>
+            <use href="${icons}#icon-loader"></use>
+          </svg>
+    </div>
+  `;
+  parentElement.innerHTML = "";
+  parentElement.insertAdjacentHTML("afterbegin", markup);
+};
+
+function getRecipe(id) {
+  renderSpinner(recipeContainer);
   let { recipe_details } = data;
   console.log(data);
-  console.log(recipes[0].image_url);
 
   const markup = `
         <figure class="recipe__fig">
           <img src="${
-            recipe_details[0].image_url
+            recipe_details[id].image_url
           }" alt="Tomato" class="recipe__img" />
           <h1 class="recipe__title">
-            <span>${recipe_details[0].title}</span>
+            <span>${recipe_details[id].title}</span>
           </h1>
         </figure>
 
@@ -26,7 +40,7 @@ async function getRecipies() {
               <use href="${icons}#icon-clock"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${
-              recipe_details[0].cooking_time
+              recipe_details[id].cooking_time
             }</span>
             <span class="recipe__info-text">minut</span>
           </div>
@@ -35,7 +49,7 @@ async function getRecipies() {
               <use href="${icons}#icon-users"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--people">${
-              recipe_details[0].serving_size
+              recipe_details[id].serving_size
             }</span>
             <span class="recipe__info-text">ilość porcji</span>
 
@@ -68,7 +82,7 @@ async function getRecipies() {
         <div class="recipe__ingredients">
           <h2 class="heading--2">Składniki</h2>
           <ul class="recipe__ingredient-list">
-            ${recipe_details[0].ingredients
+            ${recipe_details[id].ingredients
               .map((ing) => {
                 return `
             <li class="recipe__ingredient">
@@ -90,4 +104,39 @@ async function getRecipies() {
   recipeContainer.insertAdjacentHTML("afterbegin", markup);
 }
 
-getRecipies();
+recipes.forEach((recipe) => {
+  const button = document.createElement("button");
+
+  button.textContent = recipe.name;
+  previewContainer.appendChild(button);
+
+  button.addEventListener("click", () => {
+    getRecipe(recipe.id);
+    console.log(`Button ${recipe.id} was clicked.`);
+  });
+});
+
+const searchAction = function () {
+  searchInput.addEventListener("keyup", function () {
+    const query = searchInput.value.toLowerCase();
+    const filteredRecipes = recipes.filter((recipe) => {
+      return recipe.name.toLowerCase().includes(query);
+    });
+    console.log(filteredRecipes);
+    previewContainer.innerHTML = "";
+    filteredRecipes.forEach((recipe) => {
+      const button = document.createElement("button");
+
+      button.textContent = recipe.name;
+      previewContainer.appendChild(button);
+
+      button.addEventListener("click", () => {
+        getRecipe(recipe.id);
+        console.log(`Button ${recipe.id} was clicked.`);
+      });
+    });
+  });
+};
+
+getRecipe(0);
+searchAction();
