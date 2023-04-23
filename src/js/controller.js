@@ -22,7 +22,6 @@ const renderSpinner = function (parentElement) {
 function getRecipe(id) {
   renderSpinner(recipeContainer);
   let { recipe_details } = data;
-  console.log(data);
 
   const markup = `
         <figure class="recipe__fig">
@@ -104,17 +103,18 @@ function getRecipe(id) {
   recipeContainer.insertAdjacentHTML("afterbegin", markup);
 }
 
-recipes.forEach((recipe) => {
-  const button = document.createElement("button");
+function createButtons() {
+  recipes.forEach((recipe) => {
+    const button = document.createElement("button");
 
-  button.textContent = recipe.name;
-  previewContainer.appendChild(button);
+    button.textContent = recipe.name;
+    previewContainer.appendChild(button);
 
-  button.addEventListener("click", () => {
-    getRecipe(recipe.id);
-    console.log(`Button ${recipe.id} was clicked.`);
+    button.addEventListener("click", () => {
+      getRecipe(`${recipe.id}`);
+    });
   });
-});
+}
 
 const searchAction = function () {
   searchInput.addEventListener("keyup", function () {
@@ -122,7 +122,6 @@ const searchAction = function () {
     const filteredRecipes = recipes.filter((recipe) => {
       return recipe.name.toLowerCase().includes(query);
     });
-    console.log(filteredRecipes);
     previewContainer.innerHTML = "";
     filteredRecipes.forEach((recipe) => {
       const button = document.createElement("button");
@@ -132,11 +131,10 @@ const searchAction = function () {
 
       button.addEventListener("click", () => {
         getRecipe(recipe.id);
-        console.log(`Button ${recipe.id} was clicked.`);
       });
     });
   });
 };
 
-getRecipe(0);
+createButtons();
 searchAction();
