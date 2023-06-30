@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     getRecipe(0);
   });
+
+  /*
+
   ipcRenderer.on("ingredientsSent", function (evt, ingredients) {
     let all_ingredients = ingredients;
     const recipeContainer = document.querySelector(".recipeIngredients");
@@ -138,6 +141,49 @@ document.addEventListener("DOMContentLoaded", () => {
       recipeContainer.innerHTML = "";
       recipeContainer.insertAdjacentHTML("afterbegin", markup);
     }
-    getIngredient(0);
+    for (let i = 1; i < 6; i++) {
+      getIngredient(i);
+    }
+  });
+  */
+
+  ipcRenderer.on("ingredientsSent", function (evt, ingredients) {
+    let all_ingredients = ingredients;
+    const recipeContainer = document.querySelector(".recipeIngredients");
+
+    function getIngredients(recipeId) {
+      const filteredIngredients = all_ingredients.filter(
+        (ingredient) => ingredient.recipesId === recipeId
+      );
+
+      const markup = `
+      <div class="recipe__ingredients">
+        <h2 class="heading--2">Składniki</h2>
+        <ul class="recipe__ingredient-list">
+          ${filteredIngredients
+            .map(
+              (ingredient) => `
+              <li class="recipe__ingredient">
+                <svg class="recipe__icon">
+                  <use href="${icons}#icon-check"></use>
+                </svg>
+                <div class="recipe__quantity">${ingredient.quantity}</div>
+                <div class="recipe__description">
+                  <span class="recipe__unit">${ingredient.unit}</span>
+                  ${ingredient.name}
+                </div>
+              </li>
+            `
+            )
+            .join("")}
+        </ul>
+      </div>`;
+
+      recipeContainer.innerHTML = "";
+      recipeContainer.insertAdjacentHTML("afterbegin", markup);
+    }
+
+    // Call the function with the desired recipeId
+    getIngredients(1);
   });
 });

@@ -36,16 +36,10 @@ const createWindow = () => {
       win.webContents.send("recipeSent", rows);
     });
     let ingredients = knex
-      .select("id", "name", "quantity", "unit")
+      .select("id", "name", "quantity", "unit", "recipesId")
       .from("ingredient");
     ingredients.then(function (rows) {
       win.webContents.send("ingredientsSent", rows);
-    });
-    let ingredientsInRecipe = knex
-      .select("recipesId", "ingredientId")
-      .from("recipes-ingredients");
-    ingredientsInRecipe.then(function (rows) {
-      win.webContents.send("ingredientsInRecipeSent", rows);
     });
   });
 };

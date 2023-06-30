@@ -27,18 +27,17 @@ body {
   background-color: rgb(61, 90, 90);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 8vw);
+  min-height: 10px;
 }
 
 .container {
   max-width: 120rem;
-  min-height: 117rem;
-  margin: 4vw auto;
+  min-height: 80rem;
   background-color: #fff;
   border-radius: 9px;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-rows: 10rem minmax(70rem, auto);
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "head head" "list recipe";
 }

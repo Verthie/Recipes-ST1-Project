@@ -31,14 +31,13 @@ body {
 
 .container {
   max-width: 120rem;
-  min-height: 117rem;
-  margin: 4vw auto;
+  min-height: 80rem;
   background-color: #fff;
   border-radius: 9px;
   overflow: hidden;
 
   display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-rows: 10rem minmax(70rem, auto);
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
     "head head"
