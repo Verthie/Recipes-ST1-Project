@@ -2,20 +2,26 @@
   "name": "recipies",
   "version": "1.0.0",
   "description": "recipes",
-  "main": "index.html",
+  "main": "main.js",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "targets": {
     "main": false
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "build": "sass src/sass/main.scss src/css/styles.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3",
-    "parcel": "^2.8.3",
+    "@electron-forge/cli": "^6.2.1",
+    "electron-rebuild": "^3.2.9",
     "sass": "^1.62.0"
+  },
+  "dependencies": {
+    "electron": "^25.2.0",
+    "knex": "^2.4.2",
+    "sqlite3": "^5.1.6"
   }
 }
