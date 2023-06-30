@@ -31,10 +31,10 @@ const createWindow = () => {
   ipcMain.on("mainWindowLoaded", function () {
     let allrecipes = knex
       .select("*")
-      .from("recipes", "ingredient")
-      .innerJoin("ingredient", "recipes.id", "=", "ingredient.recipesId");
+      .from("recipes")
+      .where("recipes.bookmarked", 1);
     allrecipes.then(function (rows) {
-      win.webContents.send("allRecipesSent", rows);
+      win.webContents.send("allBookmarkRecipesSent", rows);
     });
   });
   ipcMain.on("detailsRecipe", function (event, recipeLoadId) {
@@ -51,9 +51,26 @@ const createWindow = () => {
     let recipesNoIg = knex
       .select("*")
       .from("recipes")
-      .where("recipes.title", "like", `${recipesLoadTitle}%`);
+      .where("recipes.title", "like", `%${recipesLoadTitle}%`);
     recipesNoIg.then(function (rows) {
       win.webContents.send("recipesNoIgSent", rows);
+    });
+  });
+  ipcMain.on("bookmarkRecipe", function (event, recipeLoadId) {
+    let recipes = knex.select("*").from("recipes").where("id", recipeLoadId);
+    recipes.then(function (rows) {
+      console.log("bez sensu:", rows);
+      let [przepisy] = rows;
+      console.log("przepisy:", przepisy);
+      if (przepisy.bookmarked === 0) {
+        knex("recipes")
+          .where("recipes.id", recipeLoadId)
+          .update({ bookmarked: 1 });
+      } else {
+        knex("recipes")
+          .where("recipes.id", recipeLoadId)
+          .update({ bookmarked: 0 });
+      }
     });
   });
 };

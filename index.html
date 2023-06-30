@@ -16,15 +16,12 @@
   <body>
    
     <div class="container">
-      <!-- <h1 id="title"></h1>
-      <h1 id="time"></h1>
-      <h1 id="size"></h1>
-      <h1 id="image"></h1> -->
       <header class="header">
         <form class="search">
           <input
             type="text"
             class="search__field"
+            id="searchInput"
             placeholder="Szukaj przepisu"
           />
           <button class="btn search__btn invisible">
@@ -34,44 +31,6 @@
             <span>Szukaj</span>
           </button>
         </form>
-
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <button class="nav__btn nav__btn--bookmarks">
-                <svg class="nav__icon">
-                  <use href="src/img/icons.svg#icon-bookmark"></use>
-                </svg>
-                <span>Zakładki</span>
-              </button>
-              <div class="bookmarks">
-                <ul class="bookmarks__list">
-                  <div class="message">
-                    <div>
-                      <svg>
-                        <use href="src/img/icons.svg#icon-smile"></use>
-                      </svg>
-                    </div>
-                    <p>Brak zakładek</p>
-                  </div>
-
-                  <!-- <li class="preview">
-                    <a class="preview__link" href="#23456">
-                      <figure class="preview__fig">
-                        <img src="src/img/test-1.jpg" alt="Test" />
-                      </figure>
-                      <div class="preview__data">
-                        <h4 class="preview__name">
-                          Pasta with Tomato Cream ...
-                        </h4>
-                      </div>
-                    </a>
-                  </li> -->
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
       </header>
 
       <div class="search-results">
@@ -112,7 +71,7 @@
 
       <div class="recipe">
         <div class="message">
-          <p>Rozpocznij poprzez wyszukanie przepisu lub składnika po angielsku.</p>
+          <p>Rozpocznij poprzez wyszukanie nazwy przepisu.</p>
         </div>
 
         <!-- <div class="spinner">
