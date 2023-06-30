@@ -11,12 +11,12 @@
     }
 
     &:hover {
-      background-color: aqua;
+      background-color: #f9f5f3;
       transform: translateY(-2px);
     }
 
     &--active {
-      background-color: aquamarine;
+      background-color: #f9f5f3;
     }
   }
 
@@ -65,7 +65,7 @@
   &__title {
     grid-column: 1/-1;
     font-size: 1.45rem;
-    color: aqua;
+    color: black;
     text-transform: uppercase;
     font-weight: 600;
 
@@ -78,13 +78,13 @@
 
   &__publisher {
     font-size: 1.15rem;
-    color: aqua;
+    color: #918581;
     text-transform: uppercase;
     font-weight: 600;
   }
 
   &__user-generated {
-    background-color: darken(aquamarine, 2%);
+    background-color: darken(#f2efee, 2%);
 
     display: flex;
     align-items: center;
@@ -99,7 +99,34 @@
     svg {
       height: 1.2rem;
       width: 1.2rem;
-      fill: aqua;
+      fill: blue;
+    }
+  }
+  &button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: 1.75rem;
+    &:hover {
+      transform: translateY(-2px);
+    }
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+    svg {
+      height: 2rem;
+      width: 2rem;
+      fill: #918581;
     }
   }
 }
