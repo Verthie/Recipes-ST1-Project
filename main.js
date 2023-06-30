@@ -12,8 +12,8 @@ const path = require("path");
 // modify your existing createWindow() function
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 1254,
+    height: 954,
     show: false,
     webPreferences: {
       nodeIntegration: true,
@@ -29,17 +29,31 @@ const createWindow = () => {
   });
 
   ipcMain.on("mainWindowLoaded", function () {
-    let recipe = knex
-      .select("id", "title", "cooking_time", "serving_size", "image_url")
-      .from("recipes");
-    recipe.then(function (rows) {
-      win.webContents.send("recipeSent", rows);
+    let allrecipes = knex
+      .select("*")
+      .from("recipes", "ingredient")
+      .innerJoin("ingredient", "recipes.id", "=", "ingredient.recipesId");
+    allrecipes.then(function (rows) {
+      win.webContents.send("allRecipesSent", rows);
     });
-    let ingredients = knex
-      .select("id", "name", "quantity", "unit", "recipesId")
-      .from("ingredient");
-    ingredients.then(function (rows) {
-      win.webContents.send("ingredientsSent", rows);
+  });
+  ipcMain.on("detailsRecipe", function (event, recipeLoadId) {
+    let recipeWithIg = knex
+      .select("*")
+      .from("recipes", "ingredient")
+      .innerJoin("ingredient", "recipes.id", "=", "ingredient.recipesId")
+      .where("recipes.id", recipeLoadId);
+    recipeWithIg.then(function (rows) {
+      win.webContents.send("recipeWithIgSent", rows);
+    });
+  });
+  ipcMain.on("leftBarRecipes", function (event, recipesLoadTitle) {
+    let recipesNoIg = knex
+      .select("*")
+      .from("recipes")
+      .where("recipes.title", "like", `${recipesLoadTitle}%`);
+    recipesNoIg.then(function (rows) {
+      win.webContents.send("recipesNoIgSent", rows);
     });
   });
 };
